@@ -17,7 +17,8 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/dashboard';
+    //Cambiamos dashboard por articulos para que nos redireccione a la vista principal de nuestro CRUD
+    public const HOME = '/articulos'; //dashboard
 
     /**
      * The controller namespace for the application.

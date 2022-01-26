@@ -1,10 +1,12 @@
-@extends('layouts.plantillabase')
+@extends('adminlte::page')
 
-@section('cssDatatable')
-    <link href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-@endsection
+@section('title', 'CRUD con Laravel 8')
 
-@section('contenido')
+@section('content_header')
+    <h1>Listado de art&iacute;los</h1>
+@stop
+
+@section('content')
     <a href="/articulos/create" class="btn btn-primary mb-3">CREAR</a>
 
     <table id="tblarticulos" class="table table-striped shadow-lg mt-4" style="width:100%">
@@ -38,9 +40,14 @@
             @endforeach
         </tbody>
     </table>
-@endsection
+@stop
 
-@section('jsDatatable')
+@section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+    <link href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+@stop
+
+@section('js')
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
@@ -53,4 +60,4 @@
 
         } );
     </script>
-@endsection
+@stop
